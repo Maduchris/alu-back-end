@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""gathers data from an API"""
+"""gathers data from an API """
 
 import json
-inport requests
+import requests
 
 
 def get_employee_task(employee_id):
@@ -15,7 +15,7 @@ def get_employee_task(employee_id):
     employee_username = user_info["username"]
     todo = "https://jsonplaceholder.typicode.com/users/{}/todos"
     todo = todo.format(employee_id)
-    todo_info = requests.request('GET', todo).json()
+    todos_info = requests.request('GET', todo).json()
     return [
         dict(zip(["task", "completed", "username"],
                  [task["title"], task["completed"], employee_username]))
