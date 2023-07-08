@@ -6,9 +6,9 @@ import json
 import requests
 import sys
 
-"""a Python3 script to export data in the JSON format"""
+"""a Python script to export data in the JSON format"""
 
-if__name__ == "__main_":
+if __name__ == "__main__":
     employee_id = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/users/{}".format(employee_id)
     todo = "https://jsonplaceholder.typicode.com/todos?userId={}"
